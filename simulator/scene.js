@@ -35,7 +35,6 @@ import URDFLoader from "urdf-loader";
 import { default as IKSolver } from "./ik/ccdik";
 //import { default as IKSolver } from "./ik/fabrik"
 import Simulation from "./simulation";
-import * as GUI from "./gui";
 import { canHover } from "../helpers";
 
 const path = require("path");
@@ -207,8 +206,6 @@ function initScene() {
   robotControl.enabled = false;
   raycaster = new Raycaster();
   enablePointerEvents();
-
-  GUI.initGui();
 }
 
 function onTargetChange() {
@@ -272,21 +269,6 @@ export function enablePointerEvents() {
     container.addEventListener("pointerdown", onClickPointerDown);
     container.addEventListener("pointerup", onClickPointerUp);
   }
-}
-
-export function disablePointerEvents() {
-  if (canHover()) {
-    container.removeEventListener("pointermove", onHoverPointerMove);
-    container.removeEventListener("pointerdown", onHoverPointerDown);
-    container.removeEventListener("pointerup", onHoverPointerUp);
-  } else {
-    container.removeEventListener("pointermove", onClickPointerMove);
-    container.removeEventListener("pointerdown", onClickPointerDown);
-    container.removeEventListener("pointerup", onClickPointerUp);
-  }
-
-  robotControl.visible = false;
-  robotControl.enabled = false;
 }
 
 function onHoverPointerMove(evt) {
