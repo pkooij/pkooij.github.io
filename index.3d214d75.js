@@ -768,10 +768,12 @@ function render() {
 }
 function enablePointerEvents() {
     if ((0, _helpers.canHover)()) {
+        container.style.touchAction = "none";
         container.addEventListener("pointermove", onHoverPointerMove);
         container.addEventListener("pointerdown", onHoverPointerDown);
         container.addEventListener("pointerup", onHoverPointerUp);
     } else {
+        container.style.touchAction = "none";
         container.addEventListener("pointermove", onClickPointerMove);
         container.addEventListener("pointerdown", onClickPointerDown);
         container.addEventListener("pointerup", onClickPointerUp);
