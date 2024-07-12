@@ -1,0 +1,5 @@
+The models under "assets/models" use their original publishers' licenses. Copies of the respective licenses have been added to the respective folders.
+
+Robot model by Franka Emika available under the Apache License 2.0. https://github.com/frankaemika/franka_ros. Modifications were made to the original model.
+
+Robot simulator by Nikolas Dahn from https://github.com/ndahn/Rocksi/tree, available under the MIT License. Modifications were made to the original code.
