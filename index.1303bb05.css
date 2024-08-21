@@ -142,4 +142,16 @@ hr {
   margin: 20px auto;
   box-shadow: 0 4px 8px #0000001a;
 }
+
+.image-row {
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  display: flex;
+}
+
+.image-row img {
+  width: 25%;
+  height: auto;
+}
 /*# sourceMappingURL=index.1303bb05.css.map */
